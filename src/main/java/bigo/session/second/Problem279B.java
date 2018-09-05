@@ -1,35 +1,35 @@
+package bigo.session.second;
+
 import java.util.Scanner;
 
-public class Main {
+public class Problem279B {
     public static void main(String[] args) {
-
         Scanner sc = new Scanner(System.in);
 
         int n = sc.nextInt();
         int t = sc.nextInt();
 
-        int[] readTimes = new int[n];
+        int j = 0, count = 0, vmax = 0;
+
+        int[] a = new int[n];
 
         for (int i = 0; i < n; i++) {
-            readTimes[i] = sc.nextInt();
+            a[i] = sc.nextInt();
         }
 
-        int j = 0;
-        int max = 0;
-        int count = 0;
-
         for (int i = 0; i < n; i++) {
-            while (t < readTimes[i]) {
-                t += readTimes[j++];
+
+            while (t < a[i]) {
+                t += a[j++];
                 count--;
             }
 
-            t -= readTimes[i];
+            t -= a[i];
             count++;
 
-            max = Math.max(max, count);
+            vmax = Math.max(vmax, count);
         }
 
-        System.out.println(max);
+        System.out.print(vmax);
     }
 }

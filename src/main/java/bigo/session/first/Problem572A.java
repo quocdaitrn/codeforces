@@ -1,4 +1,4 @@
-package bigo.session.one.problem;
+package bigo.session.first;
 
 import java.util.ArrayList;
 import java.util.List;

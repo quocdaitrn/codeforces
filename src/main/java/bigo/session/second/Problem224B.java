@@ -1,4 +1,4 @@
-package bigo.session.two.problem;
+package bigo.session.second;
 
 import java.util.Scanner;
 
